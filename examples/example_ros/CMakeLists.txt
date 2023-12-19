@@ -38,7 +38,6 @@ set(dependencies
   "std_msgs"
   "std_srvs"
   "example_msgs"
-  "swarm_launch_utils"
   "example"
 )
 
