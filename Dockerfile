@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Initialize rosdep
-RUN rosdep init && rosdep update
+RUN rosdep update
 
 # Create a workspace
 WORKDIR /home/ros2_ws/src
