@@ -1,0 +1,4 @@
+example_ros:
+  ros__parameters:
+    use_sim_time: false
+    initial_value: 10
