@@ -17,12 +17,14 @@ add_library(dynamic_param_node SHARED
   src/dynamic_param_node.cpp
 )
 target_link_libraries(dynamic_param_node
-  PUBLIC
-  ${catkin_LIBRARIES}
 )
-target_include_directories(dynamic_param_node PUBLIC include/)
+target_include_directories(dynamic_param_node PUBLIC include)
 
-ament_target_dependencies(dynamic_param_node)
+set(dependencies
+  "rclcpp"
+)
+
+ament_target_dependencies(dynamic_param_node ${dependencies})
 
 install(
   DIRECTORY include/
