@@ -7,10 +7,10 @@ namespace ros2_utils
   class DynamicParamNode : public rclcpp::Node
   {
   public:
-    inline DynamicParamNode(const std::string& node_name) : rclcpp::Node(node_name) { registerOnSetCallback(); }
+    DynamicParamNode(const std::string& node_name);
 
   protected:
-    inline void registerOnSetCallback()
+    void registerOnSetCallback()
     {
       // Register the callback for parameter changes
       _parameter_callback_handle = this->add_on_set_parameters_callback(
