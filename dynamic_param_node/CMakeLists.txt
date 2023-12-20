@@ -16,9 +16,8 @@ find_package(rclcpp REQUIRED)
 add_library(dynamic_param_node SHARED
   src/dynamic_param_node.cpp
 )
-target_link_libraries(dynamic_param_node
-)
-target_include_directories(dynamic_param_node PUBLIC include)
+target_link_libraries(dynamic_param_node)
+target_include_directories(dynamic_param_node PUBLIC include/)
 
 set(dependencies
   "rclcpp"

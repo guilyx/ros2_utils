@@ -1,4 +1,4 @@
-#include "dynamic_reparam_node/dynamic_param_node.hpp"
+#include "dynamic_param_node/dynamic_param_node.hpp"
 
 namespace ros2_utils
 {
