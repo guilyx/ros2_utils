@@ -1,0 +1,17 @@
+name: ROS2 CI with Docker
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker Image
+      run: docker build -t ros2_workspace .
+
+    - name: Run Docker Container
+      run: docker run ros2_workspace

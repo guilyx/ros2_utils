@@ -1,0 +1,5 @@
+uint8 op_type
+example_msgs/BasicMsg input
+---
+float32 result
+example_msgs/Error[<=1] error
