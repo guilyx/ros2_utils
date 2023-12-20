@@ -10,15 +10,7 @@ namespace ros2_utils
     DynamicParamNode(const std::string& node_name);
 
   protected:
-    void registerOnSetCallback()
-    {
-      // Register the callback for parameter changes
-      _parameter_callback_handle = this->add_on_set_parameters_callback(
-          [this](const std::vector<rclcpp::Parameter>& parameters) -> rcl_interfaces::msg::SetParametersResult {
-            return onSetParameter(parameters);
-          });
-    }
-
+    void registerOnSetCallback();
     virtual void updateInternalAttribute(const rclcpp::Parameter& parameter) = 0;
 
   private:
